@@ -1,11 +1,11 @@
-```html
+html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Еркін — Аномальное досье</title>
+    <title>ERK-019 — Ерасыл Әлменбет</title>
 
     <style>
         * {
@@ -15,50 +15,38 @@
         body {
             margin: 0;
             font-family: Georgia, serif;
-            color: #d8d8d8;
-
-            /* Мистический фон */
+            color: #d5d8d6;
             background:
-                radial-gradient(circle at 50% 20%, #26302d 0%, #101414 35%, #050707 75%);
+                radial-gradient(circle at 50% 15%, #27332e 0%, #111715 35%, #030504 80%);
             min-height: 100vh;
         }
 
-        body::before {
+        body::after {
             content: "";
             position: fixed;
             inset: 0;
             pointer-events: none;
-
-            background:
-                radial-gradient(circle, transparent 30%, rgba(0,0,0,0.8) 100%);
-
-            z-index: -1;
+            background: radial-gradient(circle, transparent 25%, rgba(0,0,0,.85) 100%);
         }
 
         header {
             text-align: center;
-            padding: 80px 20px 60px;
-
-            border-bottom: 1px solid #39433f;
-
-            background:
-                linear-gradient(
-                    rgba(0,0,0,0.5),
-                    rgba(0,0,0,0.9)
-                );
+            padding: 70px 20px;
+            border-bottom: 1px solid #38423e;
+            background: rgba(0,0,0,.55);
         }
 
         header h1 {
-            font-size: 52px;
+            font-size: 50px;
             letter-spacing: 8px;
-            color: #b7c8bf;
-            text-shadow: 0 0 20px #536b60;
-            margin-bottom: 10px;
+            color: #bdc9c3;
+            text-shadow: 0 0 20px #52675c;
+            margin: 0;
         }
 
         header p {
-            color: #777;
-            letter-spacing: 3px;
+            color: #68736e;
+            letter-spacing: 4px;
         }
 
         .container {
@@ -68,86 +56,91 @@
         }
 
         .card {
-            background: rgba(12, 16, 15, 0.92);
+            background: rgba(9,13,12,.94);
             border: 1px solid #343e3a;
             padding: 35px;
             margin-bottom: 25px;
-
-            box-shadow:
-                0 0 30px rgba(0,0,0,0.7),
-                inset 0 0 30px rgba(50,70,60,0.05);
+            box-shadow: 0 0 30px rgba(0,0,0,.75);
         }
 
         .classification {
-            color: #879c91;
-            font-size: 14px;
-            letter-spacing: 2px;
+            color: #73857c;
+            font-size: 13px;
+            letter-spacing: 3px;
             margin-bottom: 15px;
         }
 
         h2 {
-            color: #b4c5bd;
+            color: #b9c5bf;
             letter-spacing: 3px;
             font-weight: normal;
         }
 
         p {
             line-height: 1.8;
-            color: #aaa;
+            color: #a5aaa7;
         }
 
         .warning {
-            border-left: 3px solid #657a6e;
-            padding-left: 20px;
-            color: #8e9d96;
+            border-left: 3px solid #687b70;
+            padding-left: 18px;
+            color: #899790;
             font-style: italic;
+        }
+
+        .danger {
+            border: 1px solid #4a5550;
+            padding: 18px;
+            margin-top: 20px;
+            color: #9da7a2;
+            background: rgba(30,35,32,.5);
         }
 
         .data {
             display: grid;
-            grid-template-columns: 180px 1fr;
-            gap: 12px;
-
-            margin-top: 20px;
+            grid-template-columns: 190px 1fr;
+            gap: 0;
         }
 
         .data div {
-            padding: 10px;
+            padding: 12px;
             border-bottom: 1px solid #252c29;
         }
 
         .label {
-            color: #687870;
+            color: #68766f;
         }
 
         .value {
-            color: #c0c8c4;
+            color: #c0c6c3;
+        }
+
+        .classified {
+            text-align: center;
+            font-size: 12px;
+            letter-spacing: 4px;
+            color: #59645f;
+            margin-top: 25px;
         }
 
         .map {
             width: 100%;
-            height: 400px;
-            border: 1px solid #3b4641;
-            filter: grayscale(70%) brightness(60%);
+            height: 380px;
+            border: 1px solid #39433f;
+            filter: grayscale(80%) brightness(55%);
         }
 
         footer {
             text-align: center;
             padding: 40px;
-            color: #555;
-            font-size: 13px;
-            letter-spacing: 2px;
-        }
-
-        .secret {
-            color: #59645f;
+            color: #4e5753;
             font-size: 12px;
-            margin-top: 25px;
+            letter-spacing: 3px;
         }
 
         @media (max-width: 600px) {
             header h1 {
-                font-size: 35px;
+                font-size: 34px;
             }
 
             .data {
@@ -155,7 +148,7 @@
             }
 
             .card {
-                padding: 25px;
+                padding: 23px;
             }
         }
     </style>
@@ -164,47 +157,59 @@
 <body>
 
 <header>
-    <h1>ЕРКІН</h1>
-    <p>АРХИВ АНОМАЛЬНЫХ ЯВЛЕНИЙ</p>
+    <h1>ERK-019</h1>
+    <p>ЗАКРЫТЫЙ АРХИВ • ФОНД НАБЛЮДЕНИЯ</p>
 </header>
 
 <div class="container">
 
+    <!-- ОСНОВНАЯ ИНФОРМАЦИЯ -->
+
     <div class="card">
 
         <div class="classification">
-            ДОСЬЕ № ERK-019
+            ОБЪЕКТ: ERK-019
         </div>
 
         <h2>ЕРАСЫЛ ӘЛМЕНБЕТ</h2>
 
         <p class="warning">
-            Внимание: представленная информация является частью
-            вымышленной мистической легенды.
+            Данное досье является частью вымышленной мистической истории.
         </p>
 
         <p>
-            Согласно легенде, Ерасыл Әлменбет — аномальное существо,
-            которое находится на Земле значительно дольше, чем может
-            показаться на первый взгляд.
+            ERK-019 внешне выглядит как обычный 19-летний человек.
+            Однако архивные сведения Фонда указывают на то, что
+            настоящий возраст объекта значительно превышает
+            человеческую продолжительность жизни.
         </p>
 
         <p>
-            Внешне он выглядит как обычный 19-летний подросток.
-            Он ведёт привычную жизнь, общается с людьми и ничем
-            очевидным не отличается от окружающих.
+            Предполагается, что объект способен менять или
+            поддерживать человеческий облик, позволяя ему
+            длительное время оставаться незамеченным.
         </p>
+
+        <div class="danger">
+            <b>УРОВЕНЬ УГРОЗЫ:</b> высокий<br><br>
+            Содержание объекта признано нецелесообразным.
+            После нескольких чрезвычайных инцидентов Фонд
+            перешёл к постоянному наблюдению вместо попыток
+            удержания.
+        </div>
 
     </div>
 
 
+    <!-- ДАННЫЕ -->
+
     <div class="card">
 
         <div class="classification">
-            НАБЛЮДАЕМЫЕ ДАННЫЕ
+            ЛИЧНОЕ ДЕЛО
         </div>
 
-        <h2>КТО ОН?</h2>
+        <h2>ОБЪЕКТ</h2>
 
         <div class="data">
 
@@ -217,50 +222,160 @@
             <div class="label">Предполагаемый возраст</div>
             <div class="value">Не установлен</div>
 
-            <div class="label">Статус</div>
-            <div class="value">Неизвестен</div>
+            <div class="label">Место проживания</div>
+            <div class="value">Жанама / Еркін</div>
 
-            <div class="label">Место наблюдения</div>
-            <div class="value">Еркін, Жетісу облысы</div>
+            <div class="label">Родственники</div>
+            <div class="value">Проживают в Еркіне</div>
+
+            <div class="label">Текущий статус</div>
+            <div class="value">Наблюдение</div>
 
         </div>
 
     </div>
 
+
+    <!-- АРМИЯ -->
 
     <div class="card">
 
         <div class="classification">
-            АНОМАЛИЯ
+            ДОПОЛНИТЕЛЬНЫЕ СВЕДЕНИЯ
         </div>
 
-        <h2>ЛЕГЕНДА</h2>
+        <h2>УШАРАЛ</h2>
 
         <p>
-            Старые записи утверждают, что существо появлялось
-            в разных эпохах, однако каждый раз принимало образ
-            человека гораздо моложе своего настоящего возраста.
+            Согласно собранным данным, Ерасыл некоторое время
+            находился в армии в Ушарале.
         </p>
 
         <p>
-            Почему именно образ 19-летнего подростка был выбран
-            в этот раз — неизвестно.
-        </p>
-
-        <p>
-            Возможно, Ерасыл просто наблюдает за людьми.
-            Возможно, он пытается жить среди них, не раскрывая
-            свою настоящую природу.
-        </p>
-
-        <p class="warning">
-            Самая странная часть легенды заключается в том,
-            что никто не может точно определить, когда он
-            впервые появился в Еркінде.
+            Несмотря на обычный внешний образ, сотрудники Фонда
+            продолжали отслеживать его перемещения и поведение.
+            Военные сведения об объекте находятся под ограниченным
+            доступом.
         </p>
 
     </div>
 
+
+    <!-- ВОЗВРАЩЕНИЕ -->
+
+    <div class="card">
+
+        <div class="classification">
+            ПРОГНОЗ ПЕРЕМЕЩЕНИЯ
+        </div>
+
+        <h2>ВОЗВРАЩЕНИЕ</h2>
+
+        <p>
+            По последним данным наблюдения, ERK-019 должен
+            вернуться в Еркін в конце октября.
+        </p>
+
+        <p class="warning">
+            Группе наблюдения рекомендовано не предпринимать
+            попыток прямого контакта без крайней необходимости.
+        </p>
+
+    </div>
+
+
+    <!-- ФОНД -->
+
+    <div class="card">
+
+        <div class="classification">
+            FOUNDATION INTERNAL FILE
+        </div>
+
+        <h2>НАБЛЮДЕНИЕ ФОНДА</h2>
+
+        <p>
+            Фонд впервые заинтересовался объектом после серии
+            необычных сообщений, связанных с его перемещениями.
+        </p>
+
+        <p>
+            Первоначально рассматривалась возможность изоляции
+            ERK-019. Однако объект неоднократно демонстрировал
+            способность покидать места содержания и избегать
+            последующего обнаружения.
+        </p>
+
+        <p>
+            После нескольких опасных инцидентов было принято
+            решение отказаться от постоянного содержания.
+        </p>
+
+        <div class="danger">
+            <b>ПРОТОКОЛ:</b><br><br>
+            Не пытаться удерживать объект стандартными средствами.
+            Основная задача — наблюдение, регистрация перемещений
+            и предотвращение раскрытия информации среди населения.
+        </div>
+
+    </div>
+
+
+    <!-- ПИЩЕВОЕ ПОВЕДЕНИЕ -->
+
+    <div class="card">
+
+        <div class="classification">
+            БИОЛОГИЧЕСКИЕ НАБЛЮДЕНИЯ
+        </div>
+
+        <h2>ПИЩЕВЫЕ ПРЕДПОЧТЕНИЯ</h2>
+
+        <p>
+            Наблюдатели отмечают необычно выраженное предпочтение
+            мясной пищи.
+        </p>
+
+        <p>
+            Причина данного поведения неизвестна. Связь между
+            пищевыми предпочтениями объекта и его аномальными
+            свойствами пока не установлена.
+        </p>
+
+    </div>
+
+
+    <!-- ДРУЗЬЯ -->
+
+    <div class="card">
+
+        <div class="classification">
+            СОЦИАЛЬНЫЕ СВЯЗИ
+        </div>
+
+        <h2>АЯН И ДИАС</h2>
+
+        <p>
+            Несмотря на аномальный статус, объект поддерживает
+            обычные человеческие отношения.
+        </p>
+
+        <p>
+            Среди наиболее близких знакомых отмечены Аян и Диас.
+            По наблюдениям Фонда, Ерасыл хорошо ладит с ними
+            и воспринимает их как друзей.
+        </p>
+
+        <p class="warning">
+            Примечание наблюдателя: именно наличие обычных
+            социальных связей делает поведение объекта особенно
+            трудным для анализа.
+        </p>
+
+    </div>
+
+
+    <!-- ЕРКІН -->
 
     <div class="card">
 
@@ -271,8 +386,8 @@
         <h2>ЕРКІН</h2>
 
         <p>
-            Место, с которым связывают последние сведения
-            о Ерасыле Әлменбете.
+            Село Еркін является одним из ключевых мест,
+            связанных с объектом ERK-019.
         </p>
 
         <iframe
@@ -283,38 +398,42 @@
     </div>
 
 
+    <!-- ЗАКЛЮЧЕНИЕ -->
+
     <div class="card">
 
         <div class="classification">
-            ЗАКРЫТАЯ ЗАПИСЬ
+            FINAL REPORT
         </div>
 
-        <h2>ПОПЫТКА ОБЪЯСНЕНИЯ</h2>
+        <h2>ЗАКЛЮЧЕНИЕ</h2>
 
         <p>
-            Если легенда правдива, то человек, которого жители
-            считают обычным подростком, может существовать
-            гораздо дольше человеческой жизни.
+            ERK-019 продолжает вести жизнь, внешне не отличимую
+            от жизни обычного молодого человека.
         </p>
 
         <p>
-            Но никаких достоверных доказательств существования
-            такого существа не обнаружено.
+            Фонд продолжает наблюдение и не предпринимает
+            попыток непосредственного вмешательства.
         </p>
 
-        <p class="secret">
-            Файл ERK-019 остаётся открытым.
+        <p class="warning">
+            «Пока он считает себя обычным человеком,
+            у нас остаётся возможность просто наблюдать».
         </p>
+
+        <div class="classified">
+            ДОСТУП ОГРАНИЧЕН • ERK-019 • ФОНД
+        </div>
 
     </div>
 
 </div>
 
 <footer>
-    ERKİN ARCHIVE • CLASSIFIED • FICTIONAL FILE
+    ERKIN ARCHIVE • FICTIONAL SCP-STYLE FILE • 2026
 </footer>
 
 </body>
 </html>
-```
-
